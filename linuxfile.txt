@@ -20,12 +20,54 @@ config-6.8.0-1029-aws      grub  initrd.img-6.8.0-1029-aws  lost+found      vmli
 -------------------------------------------------------------------------------------------------------------------------------------------------
 /etc = we can see configuration files, subdirectoired like -networks , password and ssh
 ls /etc = to view
-cat /etc/hostname
+cat /etc/hostname  -- read the hostname
 ip-172-31-37-57
-cat /etc/hosts
+cat /etc/hosts  --- check network configuration
 127.0.0.1 localhost
-
-
+nano /etc/hosts we can add network config name
+-------------------------------------------------------------------------------------------------------------------------------------------------
+/usr = defaulty software installed
+ls /usr
+output
+bin  games  include  lib  lib64  libexec  local  sbin  share  src
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+/opt - it is the optional directory for users. It contains third party softwares.
+ls /opt
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+/bin = Basic commands for all users (e.g., ls, cp) 
+Usable by regular users
+ls /bin = we can see excectuable commands used like nano whoami git, vi, vim
+----------------------------------------------------------------------------------------------------------------------------------------------------
+/sbin =	System admin commands (e.g., ifconfig   reboot   shutdown)
+Mainly for root/admin
+ls /sbin
+----------------------------------------------------------------------------------------------------------------------------------------------------
+/dev = It provides access to devices like hard drives, USB drives, terminals, CD-ROMs, printers
+ls /dev = to view devices like null,tty
+output
+char             full       loop2         null        pts       tty0    tty2   tty30  tty41  tty52  tty63      userfaultfd  vcsa4  vhost-net
+/dev/tty	Terminal device
+/dev/null	Discards all data written to it
+------------------------------------------------------------------------------------------------------------------------------------------------------
+/var = it contains variable data like mails, log files. 
+Storing system log files (e.g., /var/log/).
+Temporary files for services (e.g., /var/tmp/).
+Mail and print queues (e.g., /var/spool/).
+output
+cat /var/log/syslog
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+/mnt == directory is used as a mount point for temporarily mounting filesystems, such as external drives, ISO images, or network shares.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+/lib	                                                                   /usr/lib
+Essential libraries needed for booting	                      Libraries for non-essential, user-installed programs
+Accessed by /bin & /sbin binaries	                            Accessed by /usr/bin & /usr/sbin binaries
+ls /lib
+lib = we see .so (shared object) files used by applications.
+output
+libmpathcmd.so.0                      modules-load.d       python3              ubuntu-advantage
+byobu              girepository-1.0  libmpathpersist.so.0                  multipath            python3.12           ubuntu-release-upgrader
+cloud-init         git-core          libmpathutil.so.0                     nagios               recovery-mode        udev
+cnf-update-db      gnupg             libmultipath.so.0 
 
 
 
