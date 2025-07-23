@@ -1,0 +1,50 @@
+FILE SYSTEM HIERARCHY
+
+~   =  represents the home directory of the current user
+~/  =  Shortcut for home directory path
+directly going to root
+/root =  cd /root = going to home directory to rootuser  
+/home = cd/home = just navigating to home 
+c:/ used for root direcory for c drive
+----------------------------------------------------------------------------------------------------------------------------------------------
+/boot = ls /boot = common files included in this/bootable files
+vmlinuz-* – The compressed Linux kernel.
+initrd.img-* or initramfs-* – Initial RAM disk image, used to load drivers needed before the root filesystem is mounted.
+grub/ – GRUB bootloader configuration files.
+System.map-* – Kernel symbol table.
+///////////////////////////////////////////////////////////////////
+output:
+root@ip-172-31-37-57:/home/ubuntu# ls /boot
+System.map-6.8.0-1029-aws  efi   initrd.img                 initrd.img.old  microcode.cpio  vmlinuz-6.8.0-1029-aws
+config-6.8.0-1029-aws      grub  initrd.img-6.8.0-1029-aws  lost+found      vmlinuz         vmlinuz.old
+-------------------------------------------------------------------------------------------------------------------------------------------------
+/etc = we can see configuration files, subdirectoired like -networks , password and ssh
+ls /etc = to view
+cat /etc/hostname
+ip-172-31-37-57
+cat /etc/hosts
+127.0.0.1 localhost
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
